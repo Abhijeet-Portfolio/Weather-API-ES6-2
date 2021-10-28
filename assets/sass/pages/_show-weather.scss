@@ -1,0 +1,82 @@
+.show-weather {
+    @include flex(row,space-between,null,center,wrap);
+    width: 100%;
+    padding: 20px 0;
+
+    li {
+        @include flex(row,space-between,null,end);
+        @include boxsizing;
+        width: 18%;
+        padding: 15px 1%;
+        margin: 15px 0;
+        border-radius: 10px;
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+        background-color: rgba(227, 233, 255,0.6);
+
+        .status {text-align: center;}
+
+        h2 {
+            color: #333333;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+
+        h3 {
+            margin: 10px 0;
+            color: #555555;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #808080;
+            font-size: 12px;
+        }
+
+        h5 {
+            color: #444444;
+            text-transform: capitalize;
+            font-size: 14px;
+        }
+    }
+}
+
+.pagination {
+    @include flex(row,space-between);
+    width: 25%;
+    margin: 25px auto;
+
+    .number { 
+        @include flex(row,space-between);
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    li {
+        width: 13%;
+        padding: 5px 0 4px;
+        background-color: #dee5ee;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover { background-color: #99b8e5;}
+    }
+
+    .active { background-color: #99b8e5;}
+
+    a {
+        font-size: 15px;
+        color: inherit;
+    }
+
+    span { 
+        @extend li;
+        width: 9.5%;
+    }
+
+    span:first-child a,
+    span:last-child a { text-indent: -9999px;}
+
+    span:first-child a::before { @include icon('\f100',16px);}
+    span:last-child a::before { @include icon('\f101',16px);}
+}

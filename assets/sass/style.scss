@@ -1,0 +1,10 @@
+// utilities styles
+@import "utilities/reset";
+@import "utilities/variables";
+@import "utilities/mixin";
+@import "utilities/common";
+
+// pages styles
+@import "pages/header";
+@import "pages/search";
+@import "pages/show-weather";

@@ -1,8 +1,7 @@
-@charset "utf-8";
+@charset "UTF-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -11,7 +10,7 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
 blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
 ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+dl, dt, dd, ol, ul, li, .pagination span, fieldset, form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
 figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -20,135 +19,341 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll; }
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type='radio'] {
+  vertical-align: text-bottom; }
 
 /* Hand cursor on clickable input elements */
 label,
 input[type='button'],
 input[type='submit'],
 button {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 strong {
   font-weight: bold;
   font-family: inherit;
-  font-size: inherit;
-}
+  font-size: inherit; }
 
-em { font-style: italic; }
+em {
+  font-style: italic; }
 
 img {
   width: 100%;
   border: 0;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 sub,
 sup {
   vertical-align: baseline;
   position: relative;
   font-size: 55%;
-  line-height: 0;
-}
+  line-height: 0; }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -.7em; }
+
+sub {
+  bottom: -.25em; }
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
-  content: " ";
-}
+  content: " "; }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
 
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
-}
+  text-decoration: none; }
 
-li {
+li, .pagination span {
   display: inline-block;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
-  margin: 0 auto;
-}
+  max-width: 1349px;
+  width: 90%;
+  margin: 0 auto; }
+
+body {
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 /*=================================
   Header styling starts here
 =================================*/
-
-
-
-
-
+header {
+  padding: 8px 0;
+  text-align: center;
+  background-color: #06174b; }
+  header a {
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px 0;
+    color: #f3f3f3;
+    font-size: 28px;
+    text-transform: capitalize;
+    text-decoration: underline; }
 
 /*=================================
   Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
 =================================*/
+.search .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row; }
 
+form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 5px 0 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  display: block;
+  text-align: center;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px #cccccc; }
+  form .form-group {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%;
+    margin: 10px auto;
+    position: relative; }
+  form input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px 4%;
+    border: 0;
+    margin-bottom: 18px;
+    color: #555555;
+    text-align: center;
+    font-size: 18px;
+    outline: none; }
+  form span {
+    width: 100%;
+    padding: 5px 0 0;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    color: #bd1818;
+    font-size: 12px;
+    transition: .3s ease;
+    opacity: 0; }
+  form .error {
+    opacity: 1; }
+  form .form-control {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto; }
+  form button {
+    width: 49%;
+    padding: 5px 0;
+    border: 0;
+    background-color: #808080;
+    color: #fafafa;
+    font-size: 18px;
+    text-transform: capitalize; }
+    form button:hover {
+      background-color: #585858; }
 
+.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 0 2.5% 20px;
+  margin: 20px 5%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #bbbbbb;
+  display: none;
+  background-color: rgba(240, 243, 255, 0.5); }
+  .display .status {
+    text-align: center; }
+  .display h2 {
+    color: #333333;
+    font-size: 20px;
+    text-transform: capitalize; }
+  .display h3 {
+    margin: 10px 0;
+    color: #555555;
+    font-size: 25px;
+    font-weight: 600; }
+  .display h4 {
+    color: #808080;
+    font-size: 15px; }
+  .display h5 {
+    color: #444444;
+    text-transform: capitalize;
+    font-size: 18px; }
 
+.show {
+  display: flex; }
 
+.show-weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0; }
+  .show-weather li, .show-weather .pagination span, .pagination .show-weather span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 18%;
+    padding: 15px 1%;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+    background-color: rgba(227, 233, 255, 0.6); }
+    .show-weather li .status, .show-weather .pagination span .status, .pagination .show-weather span .status {
+      text-align: center; }
+    .show-weather li h2, .show-weather .pagination span h2, .pagination .show-weather span h2 {
+      color: #333333;
+      font-size: 16px;
+      text-transform: capitalize; }
+    .show-weather li h3, .show-weather .pagination span h3, .pagination .show-weather span h3 {
+      margin: 10px 0;
+      color: #555555;
+      font-size: 18px;
+      font-weight: 600; }
+    .show-weather li h4, .show-weather .pagination span h4, .pagination .show-weather span h4 {
+      color: #808080;
+      font-size: 12px; }
+    .show-weather li h5, .show-weather .pagination span h5, .pagination .show-weather span h5 {
+      color: #444444;
+      text-transform: capitalize;
+      font-size: 14px; }
 
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  width: 25%;
+  margin: 25px auto; }
+  .pagination .number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-box-pack: space-between;
+    -ms-flex-pack: space-between;
+    justify-content: space-between;
+    width: 75%;
+    margin: 0 auto; }
+  .pagination li, .pagination span {
+    width: 13%;
+    padding: 5px 0 4px;
+    background-color: #dee5ee;
+    text-align: center;
+    cursor: pointer; }
+    .pagination li:hover, .pagination span:hover {
+      background-color: #99b8e5; }
+  .pagination .active {
+    background-color: #99b8e5; }
+  .pagination a {
+    font-size: 15px;
+    color: inherit; }
+  .pagination span {
+    width: 9.5%; }
+  .pagination span:first-child a,
+  .pagination span:last-child a {
+    text-indent: -9999px; }
+  .pagination span:first-child a::before {
+    content: "";
+    float: right;
+    font-family: 'fontAwesome';
+    font-size: 16px;
+    text-indent: 0; }
+  .pagination span:last-child a::before {
+    content: "";
+    float: right;
+    font-family: 'fontAwesome';
+    font-size: 16px;
+    text-indent: 0; }

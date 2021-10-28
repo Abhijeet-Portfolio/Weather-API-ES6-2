@@ -1,0 +1,41 @@
+// box Sizing mixin
+@mixin boxsizing {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// flex mixins
+@mixin flex($direction:null,$justify:null,$basis:null,$alignitem:null,$wrap:null) {
+    display : -webkit-box;
+    display : -ms-flexbox;
+    display : flex;
+    flex-direction: $direction;
+    @if($direction == column) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction:$direction;
+    } @else {
+      -webkit-box-orient:horizontal;
+      -webkit-box-direction:normal;
+      -ms-flex-direction:$direction;
+    }
+    -webkit-box-pack: $justify;
+    -ms-flex-pack: $justify;
+    justify-content: $justify;
+    -ms-flex-preferred-size: $basis;
+    flex-basis: $basis;
+    -webkit-box-align: $alignitem;
+    -ms-flex-align: $alignitem;
+    align-items: $alignitem;
+    -ms-flex-wrap: $wrap;
+    flex-wrap: $wrap;
+  }
+
+  // icon
+@mixin icon($icon,$size:10px,$float:right) {
+  content: $icon;
+  float: $float;
+  font-family: 'fontAwesome';
+  font-size: $size;
+  text-indent: 0;
+}
