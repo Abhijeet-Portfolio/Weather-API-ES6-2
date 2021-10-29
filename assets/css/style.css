@@ -97,7 +97,8 @@ li, .pagination span {
 .wrapper {
   max-width: 1349px;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 body {
   background-color: #f5f5f5;
@@ -155,7 +156,6 @@ form {
     width: 100%;
     padding: 7px 4%;
     border: 0;
-    margin-bottom: 18px;
     color: #555555;
     text-align: center;
     font-size: 18px;
@@ -166,11 +166,31 @@ form {
     border-radius: 5px;
     display: block;
     position: absolute;
-    bottom: 0;
+    top: 38px;
     color: #bd1818;
     font-size: 12px;
     transition: .3s ease;
     opacity: 0; }
+  form .checklist {
+    text-align: left;
+    padding: 5px 5%;
+    background-color: #f0f0f0;
+    opacity: 0;
+    transition: 1s ease; }
+    form .checklist li, form .checklist .pagination span, .pagination form .checklist span {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: row;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      margin: 4px 0;
+      font-size: 12px; }
+    form .checklist input {
+      width: 3%;
+      margin: 0 2% 0 0;
+      pointer-events: none; }
   form .error {
     opacity: 1; }
   form .form-control {
@@ -215,7 +235,7 @@ form {
   box-sizing: border-box;
   width: 30%;
   padding: 0 2.5% 20px;
-  margin: 20px 5%;
+  margin: 60px 5% 60px;
   border-radius: 15px;
   box-shadow: 0 0 10px #bbbbbb;
   display: none;
@@ -259,7 +279,7 @@ form {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
-  padding: 20px 0; }
+  padding: 10px 0 50px; }
   .show-weather li, .show-weather .pagination span, .pagination .show-weather span {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -277,7 +297,7 @@ form {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 18%;
-    padding: 15px 1%;
+    padding: 0px 1% 15px;
     margin: 15px 0;
     border-radius: 10px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
@@ -313,7 +333,10 @@ form {
   -ms-flex-pack: space-between;
   justify-content: space-between;
   width: 25%;
-  margin: 25px auto; }
+  margin: 25px auto 15px;
+  position: absolute;
+  bottom: 0;
+  left: 36%; }
   .pagination .number {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -332,13 +355,13 @@ form {
     padding: 5px 0 4px;
     background-color: #dee5ee;
     text-align: center;
+    font-size: 15px;
     cursor: pointer; }
     .pagination li:hover, .pagination span:hover {
       background-color: #99b8e5; }
   .pagination .active {
     background-color: #99b8e5; }
   .pagination a {
-    font-size: 15px;
     color: inherit; }
   .pagination span {
     width: 9.5%; }

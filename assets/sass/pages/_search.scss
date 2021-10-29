@@ -23,7 +23,6 @@ form {
         width: 100%;
         padding: 7px 4%;
         border: 0;
-        margin-bottom: 18px;
         color: #555555;
         text-align: center;
         font-size: 18px;
@@ -36,11 +35,30 @@ form {
         border-radius: 5px;
         display: block;
         position: absolute;
-        bottom: 0;
+        top: 38px;
         color: #bd1818;
         font-size: 12px;
         transition: .3s ease;
         opacity: 0
+    }
+
+    .checklist {
+        text-align: left;
+        padding: 5px 5%;
+        background-color: #f0f0f0;
+        opacity: 0;
+        transition: 1s ease;
+    
+        li {
+            @include flex(row);
+            margin: 4px 0;
+            font-size: 12px;
+        }
+        input {
+            width: 3%;
+            margin: 0 2% 0 0;
+            pointer-events: none;
+        }
     }
 
     .error { opacity: 1;}
@@ -69,7 +87,7 @@ form {
     @include boxsizing;
     width: 30%;
     padding: 0 2.5% 20px;
-    margin: 20px 5%;
+    margin: 60px 5% 60px;
     border-radius: 15px;
     box-shadow: 0 0 10px #bbbbbb;
     display: none;
